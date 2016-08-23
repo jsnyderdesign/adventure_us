@@ -41,6 +41,8 @@ function adventure_us_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	// Image size for homepage-posts
+	add_image_size( 'single-post-thumbnail', 230, 150 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

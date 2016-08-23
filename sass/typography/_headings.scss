@@ -1,3 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+h2.entry-title {
+	a, a:visited {
+		color: $color__post-headline;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $color__post-headline-hover;
+	}
+}

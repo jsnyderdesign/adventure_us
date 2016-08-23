@@ -14,11 +14,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'adventure_us' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'adventure_us' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'adventure_us' ), 'adventure_us', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
 		</div><!-- .site-info -->
+	</div><!-- .container -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

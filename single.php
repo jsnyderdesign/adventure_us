@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="container">
+	<div id="primary" class="content-area two-thirds column">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -30,6 +30,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+
 <?php
-get_sidebar();
-get_footer();
+get_sidebar(); ?>
+</div><!-- .container -->
+
+<?php
+get_footer(); ?>
