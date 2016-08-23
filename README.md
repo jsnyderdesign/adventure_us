@@ -1,2 +1,1 @@
-# adventure_us
-Wordpress Theme in development
+Working on a custom wordpress theme called Adventure us.
