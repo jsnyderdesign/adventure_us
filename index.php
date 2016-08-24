@@ -26,7 +26,7 @@ get_header(); ?>
 
 						<!-- If it's the first post on the homepage style it with this -->
 						<div class="featured-post">
-						<?php get_template_part( 'template-parts/content-homepage', get_post_format() ); ?>
+								<?php get_template_part( 'template-parts/content-homepage', get_post_format() ); ?>
 						</div>
 
 					<!-- Styling for all other regular posts -->

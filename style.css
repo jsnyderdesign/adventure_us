@@ -283,7 +283,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #e6e6e6;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -327,6 +327,59 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+/* Homepage Post Styling */
+/* Featured Post */
+.featured-post header {
+  line-height: 0; }
+.featured-post header img {
+  width: 100%;
+  height: auto; }
+.featured-post .entry-content {
+  background: #fff;
+  margin: 0;
+  padding: 30px; }
+
+/* Regular Post */
+.regular-post {
+  display: table;
+  width: 100%; }
+  .regular-post header {
+    margin: 0;
+    vertical-align: top;
+    display: table-cell;
+    line-height: 0; }
+    .regular-post header img {
+      margin: 0;
+      max-width: 300px; }
+  .regular-post .entry-content {
+    background: #fff;
+    display: table-cell;
+    padding: 20px; }
+    .regular-post .entry-content .entry-title {
+      margin: 10px 0; }
+    .regular-post .entry-content p {
+      margin: 0; }
+    .regular-post .entry-content .category {
+      font-size: .7em;
+      display: inline-block;
+      text-transform: uppercase;
+      margin: 0 10px 0 0; }
+      .regular-post .entry-content .category a, .regular-post .entry-content .category a:visited {
+        color: royalblue;
+        text-decoration: none; }
+      .regular-post .entry-content .category a:hover {
+        color: midnightblue; }
+    .regular-post .entry-content .entry-meta {
+      font-size: .6em;
+      color: #666;
+      text-transform: uppercase;
+      display: inline-block; }
+      .regular-post .entry-content .entry-meta a, .regular-post .entry-content .entry-meta a:visited {
+        color: royalblue;
+        text-decoration: none; }
+      .regular-post .entry-content .entry-meta a:hover {
+        color: midnightblue; }
+
 /*--------------------------------------------------------------
 # Skeleton Grid
 --------------------------------------------------------------*/
@@ -335,7 +388,7 @@ table {
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }

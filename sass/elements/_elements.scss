@@ -36,3 +36,74 @@ img {
 }
 
 @import "tables";
+
+/* Homepage Post Styling */
+
+/* Featured Post */
+.featured-post {
+	header {
+		line-height: 0;
+	}
+	header img {
+		width: 100%;
+		height: auto;
+	}
+	.entry-content {
+		background: $color__card-background;
+		margin: 0;
+		padding: 30px;
+	}
+}
+
+/* Regular Post */
+.regular-post {
+	display: table;
+	width: 100%;
+	header {
+		margin: 0;
+		vertical-align: top;
+		display: table-cell;
+		line-height: 0;
+		img {
+			margin: 0;
+			max-width: 300px;
+		}
+	}
+	.entry-content {
+		background: $color__card-background;
+		display: table-cell;
+		padding: 20px;
+		.entry-title {
+			margin: 10px 0;
+		}
+		p {
+			margin: 0;
+		}
+		.category {
+			font-size: .7em;
+			display: inline-block;
+			text-transform: uppercase;
+			margin: 0 10px 0 0;
+			a, a:visited {
+				color: $color__link;
+				text-decoration: none;
+			}
+			a:hover {
+				color: $color__link-hover;
+			}
+		}
+		.entry-meta {
+			font-size: .6em;
+			color: #666;
+			text-transform: uppercase;
+			display: inline-block;
+			a, a:visited {
+				color: $color__link;
+				text-decoration: none;
+			}
+			a:hover {
+				color: $color__link-hover;
+			}
+		}
+	}
+}

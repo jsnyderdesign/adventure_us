@@ -25,7 +25,7 @@ function adventure_us_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'adventure_us' ),
+		esc_html_x( 'on %s', 'post date', 'adventure_us' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
