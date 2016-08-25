@@ -346,9 +346,9 @@ nav.main-navigation {
   nav.main-navigation li {
     margin: 0 0 0 20px; }
     nav.main-navigation li a {
-      padding: 10px;
+      padding: 5px 0px;
       color: #24232b;
-      font-weight: 700;
+      font-weight: 400;
       text-shadow: none;
       -webkit-transition: color 0.3s;
       -moz-transition: color 0.3s;
@@ -359,7 +359,7 @@ nav.main-navigation {
       position: absolute;
       left: 0;
       width: 100%;
-      height: 2px;
+      height: 1px;
       background: #b98822;
       content: '';
       opacity: 0;
@@ -390,6 +390,13 @@ nav.main-navigation {
       -webkit-transform: translateY(0px);
       -moz-transform: translateY(0px);
       transform: translateY(0px); }
+  nav.main-navigation ul ul {
+    background: #fff;
+    top: 2.125em; }
+    nav.main-navigation ul ul a:hover:before, nav.main-navigation ul ul a:hover:after {
+      content: '';
+      opacity: 0;
+      height: 0px; }
 
 /* Featured Image */
 .header-image {
@@ -515,6 +522,16 @@ nav.main-navigation {
         text-decoration: none; }
       .regular-post .entry-content .entry-meta a:hover {
         color: midnightblue; }
+
+.widget {
+  padding: 20px;
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+  background: #fff; }
+
+.widget-title {
+  margin: 0 0 15px 0; }
 
 /*--------------------------------------------------------------
 # Skeleton Grid

@@ -48,19 +48,6 @@
 	</header><!-- #masthead -->
 </div><!-- .container -->
 
-<!-- Adds custom header support -->
-<?php if ( get_header_image() ) : ?>
-	<!-- Adds custom header as background with gradient over the top -->
-<div class="header-image" style="
-	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.65) 100%), url('<?php header_image(); ?>') no-repeat;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(20%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('<?php header_image(); ?>') no-repeat;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.65) 100%), url('<?php header_image(); ?>') no-repeat;
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.65) 100%), url('<?php header_image(); ?>') no-repeat;
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.65) 100%), url('<?php header_image(); ?>') no-repeat;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.65) 100%), url('<?php header_image(); ?>') no-repeat;">
-	<!-- Puts site quote here -->
-	<p class="site-quote"><?php echo get_theme_mod( 'site_quote' ); ?></p>
-</div>
-<?php endif; // End header image check. ?>
+
 
 	<div id="content" class="site-content">
