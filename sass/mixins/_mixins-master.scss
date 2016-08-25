@@ -22,3 +22,11 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+
+// Card Shadow
+@mixin card-shadow {
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.05);
+}

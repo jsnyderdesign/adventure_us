@@ -18,7 +18,7 @@
 
 	<div class="entry-content">
 		<div class="category">
-		<?php the_category( ' | ' ); ?>
+		<?php wp_list_categories('title_li=&hierarchical=0&depth=1' , ' | ' ); ?>
 	</div>
 	<div class="entry-meta">
 		<?php adventure_us_posted_on(); ?>
