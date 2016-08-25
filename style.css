@@ -33,6 +33,7 @@ Tags:
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+/* Added Colors */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -217,7 +218,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -227,12 +228,16 @@ h1, h2, h3, h4, h5, h6 {
 
 h2.entry-title a, h2.entry-title a:visited {
   color: #000;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: .8em;
+  line-height: 1.5em;
+  display: inline-block; }
 h2.entry-title a:hover {
   color: #999; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  font-family: "Cardo", serif; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -327,12 +332,83 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+/* Logo and Navigation */
+.site-branding {
+  float: left;
+  display: inline-block; }
+
+nav.main-navigation {
+  display: inline-block;
+  float: right;
+  margin: 35px 0 0 0;
+  width: auto;
+  clear: none; }
+  nav.main-navigation li {
+    margin: 0 0 0 20px; }
+    nav.main-navigation li a {
+      padding: 10px;
+      color: #24232b;
+      font-weight: 700;
+      text-shadow: none;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s;
+      text-transform: uppercase; }
+    nav.main-navigation li a:before,
+    nav.main-navigation li a:after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #b98822;
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      transform: translateY(-10px); }
+    nav.main-navigation li a:before {
+      top: 0;
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      transform: translateY(-10px); }
+    nav.main-navigation li a:after {
+      bottom: 0;
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      transform: translateY(10px); }
+    nav.main-navigation li a:hover,
+    nav.main-navigation li a:focus {
+      color: #b98822; }
+    nav.main-navigation li a:hover:before,
+    nav.main-navigation li a:focus:before,
+    nav.main-navigation li a:hover:after,
+    nav.main-navigation li a:focus:after {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px); }
+
 /* Featured Image */
 .header-image {
   height: 600px;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 75px auto; }
+  margin: 0 auto 75px auto;
+  position: relative; }
+  .header-image p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
 
 /* Homepage Post Styling */
 /* Featured Post */
@@ -405,7 +481,7 @@ table {
   .regular-post .entry-content {
     background: #fff;
     display: table-cell;
-    padding: 20px; }
+    padding: 10px 20px 20px; }
     .regular-post .entry-content .entry-title {
       margin: 10px 0; }
     .regular-post .entry-content p {

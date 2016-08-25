@@ -14,6 +14,9 @@ function adventure_us_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	// remove Tagline
+	$wp_customize->remove_section( 'blogdescription' );
+	$wp_customize->remove_control('blogdescription');
 
 	$wp_customize->add_section( 'site_quote', array(
     'title'          => __( 'Site Quote', 'themename' ),
