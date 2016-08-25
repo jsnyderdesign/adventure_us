@@ -14,8 +14,28 @@ function adventure_us_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	$wp_customize->add_section( 'site_quote', array(
+    'title'          => __( 'Site Quote', 'themename' ),
+    'priority'       => 35,
+) );
+	$wp_customize->add_setting( 'site_quote', array(
+		  'default'        => '',
+	    'type'           => 'theme_mod',
+	    'capability'     => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'site_quote', array(
+    'label'      => __( 'Site Quote', 'themename' ),
+    'section'    => 'site_quote',
+    'settings'   => 'site_quote',
+    'type'       => 'text',
+) );
 }
+
+
+
 add_action( 'customize_register', 'adventure_us_customize_register' );
+
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

@@ -51,7 +51,8 @@
 <!-- Adds custom header support -->
 <?php if ( get_header_image() ) : ?>
 <div class="header-image" style="background-image: url('<?php header_image(); ?>');">
-	<!--<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt=""> -->
+	<!-- Puts site quote here -->
+	<p class="site-quote"><?php echo get_theme_mod( 'site_quote' ); ?></p>
 </div>
 <?php endif; // End header image check. ?>
 

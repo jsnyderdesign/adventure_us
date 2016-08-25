@@ -61,6 +61,8 @@ function adventure_us_setup() {
  * @param int $length Excerpt length.
  * @return int (Maybe) modified excerpt length.
  */
+
+// Set excerpt length here... I think. 
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
