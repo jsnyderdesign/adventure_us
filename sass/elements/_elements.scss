@@ -59,6 +59,7 @@ nav.main-navigation {
 	width: auto;
 	clear: none;
 
+
 	li {
 		margin: 0 0 0 20px;
 
@@ -72,7 +73,6 @@ nav.main-navigation {
 			transition: color 0.3s;
 			text-transform: uppercase;
 		}
-
 		 a:before,
 		 a:after {
 			position: absolute;
@@ -103,7 +103,6 @@ nav.main-navigation {
 			-moz-transform: translateY(10px);
 			transform: translateY(10px);
 		}
-
 		 a:hover,
 		 a:focus {
 			color: $color__site-hover;
@@ -130,7 +129,13 @@ nav.main-navigation {
 		}
 	}
 }
-
+.menu-item-has-children {
+	background: url(http://adventureus.jessesnyderdesign.com/wp-content/themes/_s-master%202/images/down-caret.jpg);
+	height: 21px;
+	width: 21px;
+	display: block;
+	background-repeat: no-repeat;
+}
 
 /* Featured Image */
 .header-image {

@@ -406,6 +406,13 @@ nav.main-navigation {
       opacity: 0;
       height: 0px; }
 
+.menu-item-has-children {
+  background: url(http://adventureus.jessesnyderdesign.com/wp-content/themes/_s-master%202/images/down-caret.jpg);
+  height: 21px;
+  width: 21px;
+  display: block;
+  background-repeat: no-repeat; }
+
 /* Featured Image */
 .header-image {
   height: 600px;
