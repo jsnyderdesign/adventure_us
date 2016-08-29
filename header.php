@@ -21,6 +21,10 @@
  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 
+<!-- Font Awesome Embed -->
+<script src="https://use.fontawesome.com/1a73dbe823.js"></script>
+
+
 <?php wp_head(); ?>
 </head>
 

@@ -32,6 +32,12 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div><!-- .footer-nav -->
+
+		<!-- Adds Social Media buttons -->
+		<div class="footer-social-media">
+				<?php wi_social_icons(); ?>
+		</div><!-- .footer-social-media -->
+
 		</div><!-- .site-info -->
 	</div><!-- .container -->
 	</footer><!-- #colophon -->

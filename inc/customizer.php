@@ -37,7 +37,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	// Adds Custom Logo Settings
 	$wp_customize->add_section( 'site_logo', array(
 		'title'          => __( 'Site Logo', 'themename' ),
-		'priority'       => 35,
+		'priority'       => 36,
 	) );
 	$wp_customize->add_setting( 'site_logo', array(
 			'default'        => '',
@@ -59,7 +59,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	 // Adds Featured Title Section
  	$wp_customize->add_section( 'featured_title', array(
      'title'          => __( 'Featured Post Title', 'themename' ),
-     'priority'       => 35,
+     'priority'       => 38,
  ) );
  	$wp_customize->add_setting( 'featured_title', array(
  		  'default'        => '',
@@ -75,7 +75,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	// Adds Regular Title Section
  $wp_customize->add_section( 'regular_title', array(
 		'title'          => __( 'Secondary Post Title', 'themename' ),
-		'priority'       => 35,
+		'priority'       => 40,
 ) );
  $wp_customize->add_setting( 'regular_title', array(
 		 'default'        => '',
@@ -88,6 +88,183 @@ function adventure_us_customize_register( $wp_customize ) {
 		'settings'   => 'regular_title',
 		'type'       => 'text',
  ) );
+	// SOCIAL MEDIA BUTTONS STARTING HERE
+	$wp_customize->add_section( 'socials',
+		array(
+			'title'		=> __('Social Icons', 'themename'),
+			'priority'	=> 23
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_facebook'
+	);
+	$wp_customize->add_control(
+		'wi_facebook',
+		array(
+			'label'		=> __('Facebook URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 1
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_twitter'
+	);
+	$wp_customize->add_control(
+		'wi_twitter',
+		array(
+			'label'		=> __('Twitter URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 2
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_behance'
+	);
+	$wp_customize->add_control(
+		'wi_behance',
+		array(
+			'label'		=> __('Behance URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 3
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_dribbble'
+	);
+	$wp_customize->add_control(
+		'wi_dribbble',
+		array(
+			'label'		=> __('Dribbble URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 4
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_flickr'
+	);
+	$wp_customize->add_control(
+		'wi_flickr',
+		array(
+			'label'		=> __('Flickr URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 5
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_instagram'
+	);
+	$wp_customize->add_control(
+		'wi_instagram',
+		array(
+			'label'		=> __('Instagram URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 6
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_googleplus'
+	);
+	$wp_customize->add_control(
+		'wi_googleplus',
+		array(
+			'label'		=> __('Google+ URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 7
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_youtube'
+	);
+	$wp_customize->add_control(
+		'wi_youtube',
+		array(
+			'label'		=> __('YouTube URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 8
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_vimeo'
+	);
+	$wp_customize->add_control(
+		'wi_vimeo', array(
+			'label'		=> __('Vimeo URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 9
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_pinterest'
+	);
+	$wp_customize->add_control(
+		'wi_pinterest',
+		array(
+			'label'		=> __('Pinterest URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 10
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_github'
+	);
+	$wp_customize->add_control(
+		'wi_github',
+		array(
+			'label'		=> __('GitHub URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 11
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_linkedin'
+	);
+	$wp_customize->add_control(
+		'wi_linkedin',
+		array(
+			'label'		=> __('LinkedIn URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 12
+		)
+	);
+
+	$wp_customize->add_setting(
+		'wi_rss'
+	);
+	$wp_customize->add_control(
+		'wi_rss',
+		array(
+			'label'		=> __('RSS URL', 'themename'),
+			'section'	=> 'socials',
+			'type'		=> 'text',
+			'priority'	=> 13
+		)
+	);
+
+
 
 }
 

@@ -119,6 +119,45 @@ function adventure_us_widgets_init() {
 }
 add_action( 'widgets_init', 'adventure_us_widgets_init' );
 
+
+function wi_social_icons() {
+	$facebook = get_theme_mod( 'wi_facebook' );
+	$twitter = get_theme_mod( 'wi_twitter' );
+	$behance = get_theme_mod( 'wi_behance' );
+	$dribbble = get_theme_mod( 'wi_dribbble' );
+	$flickr = get_theme_mod( 'wi_flickr' );
+	$instagram = get_theme_mod( 'wi_instagram' );
+	$googleplus = get_theme_mod( 'wi_googleplus' );
+	$youtube = get_theme_mod( 'wi_youtube' );
+	$vimeo = get_theme_mod( 'wi_vimeo' );
+	$pinterest = get_theme_mod( 'wi_pinterest' );
+	$soundcloud = get_theme_mod( 'wi_soundcloud' );
+	$github = get_theme_mod( 'wi_github' );
+	$linkedin = get_theme_mod( 'wi_linkedin' );
+	$rss = get_theme_mod( 'wi_rss' );
+
+	if ( ! $facebook && ! $twitter && ! $behance && ! $flickr && ! $instagram && ! $googleplus && ! $youtube && ! $vimeo && ! $pinterest && ! $github && ! $linkedin && ! $rss ) {
+		return;
+	}
+
+	echo '<div class="social-icons">';
+		if ( $facebook ) echo  '<a target="_blank" href="' . esc_url( $facebook ) . '" target="_blank"><i class="fa fa-facebook"></i></a>';
+		if ( $twitter ) echo '<a target="_blank" href="' . esc_url( $twitter ) . '"><i class="fa fa-twitter"></i></a>';
+		if ( $behance ) echo  '<a target="_blank" href="' . esc_url( $behance ) . '"><i class="fa fa-behance"></i></a>';
+		if ( $dribbble ) echo  '<a target="_blank" href="' . esc_url( $dribbble ) . '"><i class="fa fa-dribbble"></i></a>';
+		if ( $flickr ) echo  '<a target="_blank" href="' . esc_url( $flickr ) . '"><i class="fa fa-flickr"></i></a>';
+		if ( $instagram ) echo  '<a target="_blank" href="' . esc_url( $instagram ) . '"><i class="fa fa-instagram"></i></a>';
+		if ( $googleplus ) echo  '<a target="_blank" href="' . esc_url( $googleplus ) . '"><i class="fa fa-google-plus"></i></a>';
+		if ( $youtube ) echo  '<a target="_blank" href="' . esc_url( $youtube ) . '"><i class="fa fa-youtube"></i></a>';
+		if ( $vimeo ) echo  '<a target="_blank" href="' . esc_url( $vimeo ) . '"><i class="fa fa-vimeo-square"></i></a>';
+		if ( $pinterest ) echo  '<a target="_blank" href="' . esc_url( $pinterest ) . '"><i class="fa fa-pinterest"></i></a>';
+		if ( $github ) echo  '<a target="_blank" href="' . esc_url( $github ) . '"><i class="fa fa-github"></i></a>';
+		if ( $linkedin ) echo  '<a target="_blank" href="' . esc_url( $linkedin ) . '"><i class="fa fa-linkedin"></i></a>';
+		if ( $rss ) echo  '<a target="_blank" href="' . esc_url( $rss ) . '"><i class="fa fa-rss"></i></a>';
+	echo '</div>';
+}
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -280,6 +319,10 @@ class TutsplusText_Widget extends WP_Widget {
     }
 
 }
+
+
+
+
 
 /* Register the widget */
 add_action( 'widgets_init', function(){
