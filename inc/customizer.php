@@ -17,11 +17,13 @@ function adventure_us_customize_register( $wp_customize ) {
 	// remove Tagline
 	$wp_customize->remove_section( 'blogdescription' );
 	$wp_customize->remove_control('blogdescription');
+		$wp_customize->remove_section( 'colors' );
+	$wp_customize->remove_control('colors');
 
 	// Adds Site Quote Section
 	$wp_customize->add_section( 'site_quote', array(
     'title'          => __( 'Site Quote', 'themename' ),
-    'priority'       => 35,
+    'priority'       => 36,
 ) );
 	$wp_customize->add_setting( 'site_quote', array(
 		  'default'        => '',
@@ -37,7 +39,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	// Adds Custom Logo Settings
 	$wp_customize->add_section( 'site_logo', array(
 		'title'          => __( 'Site Logo', 'themename' ),
-		'priority'       => 36,
+		'priority'       => 35,
 	) );
 	$wp_customize->add_setting( 'site_logo', array(
 			'default'        => '',
@@ -59,7 +61,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	 // Adds Featured Title Section
  	$wp_customize->add_section( 'featured_title', array(
      'title'          => __( 'Featured Post Title', 'themename' ),
-     'priority'       => 38,
+     'priority'       => 40,
  ) );
  	$wp_customize->add_setting( 'featured_title', array(
  		  'default'        => '',
@@ -75,7 +77,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	// Adds Regular Title Section
  $wp_customize->add_section( 'regular_title', array(
 		'title'          => __( 'Secondary Post Title', 'themename' ),
-		'priority'       => 40,
+		'priority'       => 41,
 ) );
  $wp_customize->add_setting( 'regular_title', array(
 		 'default'        => '',
@@ -92,7 +94,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'socials',
 		array(
 			'title'		=> __('Social Icons', 'themename'),
-			'priority'	=> 23
+			'priority'	=> 50
 		)
 	);
 
@@ -264,10 +266,62 @@ function adventure_us_customize_register( $wp_customize ) {
 		)
 	);
 
+	// add new section
+	$wp_customize->add_section( 'theme_colors', array(
+		'title' => __( 'Theme Color', 'bwpy' ),
+		'priority' => 100,
+	) );
+
+	// add color picker setting
+	$wp_customize->add_setting( 'theme_colors', array(
+		'default' => '#b98822'
+	) );
+
+	// add color picker control
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label' => 'Theme Color',
+		'section' => 'theme_colors',
+		'settings' => 'theme_colors',
+	) ) );
 
 
 }
 
+
+function bwpy_customizer_head_styles() {
+	$theme_color = get_theme_mod( 'theme_colors' );
+
+	if ( $theme_color != '#b98822' ) :
+	?>
+		<style type="text/css">
+			a {
+				color: <?php echo $theme_color; ?>;
+			}
+			nav.main-navigation li a:before, nav.main-navigation li a:after  {
+				background: <?php echo $theme_color; ?>;
+			}
+			nav.main-navigation li a:hover {
+				color: <?php echo $theme_color; ?>;
+			}
+			.featured-post .entry-content .category a, .featured-post .entry-content .category a:visited,
+			.regular-post .entry-content .category a, .regular-post .entry-content .category a:visited {
+				color: <?php echo $theme_color; ?>;
+			}
+			.featured-post .entry-meta a, .featured-post .entry-meta a:visited,
+			.regular-post .entry-content .entry-meta a, .regular-post .entry-content .entry-meta a:visited {
+				color: <?php echo $theme_color; ?>;
+			}
+			h2.entry-title a:hover {
+				color: <?php echo $theme_color; ?>;
+			}
+			h2.section-title::after {
+			 background: <?php echo $theme_color; ?>;
+			}
+		</style>
+	<?php
+	endif;
+}
+add_action( 'wp_head', 'bwpy_customizer_head_styles' );
 
 
 add_action( 'customize_register', 'adventure_us_customize_register' );
