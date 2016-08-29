@@ -52,10 +52,43 @@ function adventure_us_customize_register( $wp_customize ) {
                'label'      => __( 'Upload a logo', 'theme_name' ),
                'section'    => 'site_logo',
                'settings'   => 'site_logo',
-               'context'    => 'site_logo' 
+               'context'    => 'site_logo'
            )
        )
    );
+	 // Adds Featured Title Section
+ 	$wp_customize->add_section( 'featured_title', array(
+     'title'          => __( 'Featured Post Title', 'themename' ),
+     'priority'       => 35,
+ ) );
+ 	$wp_customize->add_setting( 'featured_title', array(
+ 		  'default'        => '',
+ 	    'type'           => 'theme_mod',
+ 	    'capability'     => 'edit_theme_options',
+ 	) );
+ 	$wp_customize->add_control( 'featured_title', array(
+     'label'      => __( 'Featured Post Title', 'themename' ),
+     'section'    => 'featured_title',
+     'settings'   => 'featured_title',
+     'type'       => 'text',
+ 	) );
+	// Adds Regular Title Section
+ $wp_customize->add_section( 'regular_title', array(
+		'title'          => __( 'Secondary Post Title', 'themename' ),
+		'priority'       => 35,
+) );
+ $wp_customize->add_setting( 'regular_title', array(
+		 'default'        => '',
+		 'type'           => 'theme_mod',
+		 'capability'     => 'edit_theme_options',
+ ) );
+ $wp_customize->add_control( 'regular_title', array(
+		'label'      => __( 'Secondary Post Title', 'themename' ),
+		'section'    => 'regular_title',
+		'settings'   => 'regular_title',
+		'type'       => 'text',
+ ) );
+
 }
 
 

@@ -16,9 +16,22 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'adventure_us' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'adventure_us' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'adventure_us' ), 'adventure_us', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php if ( get_theme_mod( 'site_logo' ) ) : ?>
+				<div class='site-footer-logo'>
+					<a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'site_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+				</div>
+			<?php else : ?>
+	 			<div class="site-branding-title">
+					<h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+				</div>
+			<?php endif; ?>
+			<div class="footer-nav">
+			<p class="footer-tagline">Explore</p>
+			<nav id="main-navigation" class="main-navigation footer-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'adventure_us' ); ?></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+		</div><!-- .footer-nav -->
 		</div><!-- .site-info -->
 	</div><!-- .container -->
 	</footer><!-- #colophon -->

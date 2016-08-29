@@ -81,10 +81,10 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'adventure_us_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	//$add_theme_support( 'custom-background', apply_filters( 'adventure_us_custom_background_args', array(
+		//'default-color' => 'ffffff',
+		//'default-image' => '',
+	//) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'adventure_us_setup' );

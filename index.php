@@ -45,10 +45,12 @@ get_header(); ?>
 						<?php if ($postvariable == 1) { ?>
 
 						<!-- If it's the first post on the homepage style it with this -->
+						<h2 class="section-title"><?php echo get_theme_mod( 'featured_title' ); ?></h2>
 						<div class="featured-post">
+
 								<?php get_template_part( 'template-parts/content-homepage', get_post_format() ); ?>
 						</div>
-
+					<h2 class="section-title"><?php echo get_theme_mod( 'regular_title' ); ?></h2>	
 					<!-- Styling for all other regular posts -->
 					<?php } else { ?>
 					<div class="regular-post">

@@ -288,8 +288,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #e6e6e6;
-  /* Fallback for when there is no custom background color defined. */ }
+  background: url(images/gray-pattern.png) repeat; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -407,11 +406,13 @@ nav.main-navigation {
       height: 0px; }
 
 .menu-item-has-children {
-  background: url(http://adventureus.jessesnyderdesign.com/wp-content/themes/_s-master%202/images/down-caret.jpg);
-  height: 21px;
-  width: 21px;
+  background: url(images/down-caret.jpg);
+  height: auto;
+  width: auto;
   display: block;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  padding: 0 13px 0 0; }
 
 /* Featured Image */
 .header-image {
@@ -435,7 +436,7 @@ nav.main-navigation {
 /* Homepage Post Styling */
 /* Featured Post */
 .featured-post {
-  margin: 0 0 20px 0;
+  margin: 0 0 65px 0;
   -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05); }
@@ -466,20 +467,37 @@ nav.main-navigation {
       .featured-post .entry-content .category li:nth-child(n+4) {
         display: none; }
       .featured-post .entry-content .category a, .featured-post .entry-content .category a:visited {
-        color: royalblue;
+        color: #b98822;
         text-decoration: none; }
       .featured-post .entry-content .category a:hover {
-        color: midnightblue; }
+        color: #24232b; }
   .featured-post .entry-meta {
     font-size: .6em;
     color: #666;
     text-transform: uppercase;
     display: inline-block; }
     .featured-post .entry-meta a, .featured-post .entry-meta a:visited {
-      color: royalblue;
+      color: #b98822;
       text-decoration: none; }
     .featured-post .entry-meta a:hover {
-      color: midnightblue; }
+      color: #24232b; }
+
+h2.section-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #24232b;
+  margin: 0 0 35px 0;
+  position: relative; }
+
+h2.section-title:after {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 120px;
+  height: 2px;
+  background: #b98822;
+  content: '';
+  opacity: 1; }
 
 /* Regular Post */
 .regular-post {
@@ -523,21 +541,22 @@ nav.main-navigation {
       .regular-post .entry-content .category li:nth-child(n+4) {
         display: none; }
       .regular-post .entry-content .category a, .regular-post .entry-content .category a:visited {
-        color: royalblue;
+        color: #b98822;
         text-decoration: none; }
       .regular-post .entry-content .category a:hover {
-        color: midnightblue; }
+        color: #24232b; }
     .regular-post .entry-content .entry-meta {
       font-size: .6em;
       color: #666;
       text-transform: uppercase;
       display: inline-block; }
       .regular-post .entry-content .entry-meta a, .regular-post .entry-content .entry-meta a:visited {
-        color: royalblue;
+        color: #b98822;
         text-decoration: none; }
       .regular-post .entry-content .entry-meta a:hover {
-        color: midnightblue; }
+        color: #24232b; }
 
+/* Sidebar Styling */
 .widget {
   padding: 20px;
   -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
@@ -547,6 +566,99 @@ nav.main-navigation {
 
 .widget-title {
   margin: 0 0 15px 0; }
+
+/* Footer Styling */
+footer {
+  background: #fff; }
+  footer .site-info {
+    text-align: center; }
+    footer .site-info .footer-nav {
+      margin: 0px auto 50px;
+      display: inline-block; }
+    footer .site-info p.footer-tagline {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.25em;
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      color: #636363;
+      float: left; }
+    footer .site-info p.footer-tagline:after {
+      content: '|';
+      margin: 0 0 0 25px;
+      font-weight: 400; }
+
+.site-footer-logo {
+  margin: 35px auto;
+  width: 300px; }
+
+/*Footer Navigation */
+nav.footer-navigation {
+  display: inline-block;
+  float: left;
+  margin: 0 auto 0px auto;
+  width: auto;
+  clear: none; }
+  nav.footer-navigation li {
+    margin: 0 0 0 20px; }
+    nav.footer-navigation li a {
+      padding: 5px 0px;
+      color: #24232b;
+      font-weight: 400;
+      text-shadow: none;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s;
+      text-transform: uppercase;
+      font-size: .85em; }
+    nav.footer-navigation li a:before,
+    nav.footer-navigation li a:after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #b98822;
+      content: '';
+      opacity: 0;
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      transform: translateY(-10px); }
+    nav.footer-navigation li a:before {
+      top: 0;
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      transform: translateY(-10px); }
+    nav.footer-navigation li a:after {
+      bottom: 0;
+      -webkit-transform: translateY(10px);
+      -moz-transform: translateY(10px);
+      transform: translateY(10px); }
+    nav.footer-navigation li a:hover,
+    nav.footer-navigation li a:focus {
+      color: #b98822; }
+    nav.footer-navigation li a:hover:before,
+    nav.footer-navigation li a:focus:before,
+    nav.footer-navigation li a:hover:after,
+    nav.footer-navigation li a:focus:after {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px); }
+  nav.footer-navigation ul ul {
+    display: none; }
+    nav.footer-navigation ul ul a:hover:before, nav.footer-navigation ul ul a:hover:after {
+      content: '';
+      opacity: 0;
+      height: 0px; }
+  nav.footer-navigation .menu-item-has-children {
+    background: none;
+    height: auto;
+    width: auto;
+    display: block;
+    padding: 0; }
 
 /*--------------------------------------------------------------
 # Skeleton Grid
