@@ -18,6 +18,7 @@ function adventure_us_customize_register( $wp_customize ) {
 	$wp_customize->remove_section( 'blogdescription' );
 	$wp_customize->remove_control('blogdescription');
 
+	// Adds Site Quote Section
 	$wp_customize->add_section( 'site_quote', array(
     'title'          => __( 'Site Quote', 'themename' ),
     'priority'       => 35,
@@ -32,7 +33,29 @@ function adventure_us_customize_register( $wp_customize ) {
     'section'    => 'site_quote',
     'settings'   => 'site_quote',
     'type'       => 'text',
-) );
+	) );
+	// Adds Custom Logo Settings
+	$wp_customize->add_section( 'site_logo', array(
+		'title'          => __( 'Site Logo', 'themename' ),
+		'priority'       => 35,
+	) );
+	$wp_customize->add_setting( 'site_logo', array(
+			'default'        => '',
+			'type'           => 'theme_mod',
+			'capability'     => 'edit_theme_options',
+	) );
+	$wp_customize->add_control(
+       new WP_Customize_Image_Control(
+           $wp_customize,
+           'site_logo',
+           array(
+               'label'      => __( 'Upload a logo', 'theme_name' ),
+               'section'    => 'site_logo',
+               'settings'   => 'site_logo',
+               'context'    => 'site_logo' 
+           )
+       )
+   );
 }
 
 
