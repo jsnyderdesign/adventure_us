@@ -344,6 +344,46 @@ header {
   float: left;
   display: inline-block; }
 
+.header-search {
+  display: inline-block;
+  float: right;
+  margin: 27px 0 0 25px; }
+  .header-search .header-search-bar {
+    display: none;
+    opacity: 0;
+    margin: 0; }
+  .header-search .reveal {
+    display: inline-block;
+    margin: 0;
+    opacity: 1; }
+  .header-search .search-icon-close {
+    display: none;
+    float: right;
+    margin: 7px 0 0 10px; }
+  .header-search .search-icon {
+    display: inline-block;
+    margin: 7px 0 0 0;
+    float: right; }
+  .header-search input[type="submit"] {
+    background: #b98822;
+    color: #fff;
+    border: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0px;
+    text-transform: uppercase;
+    line-height: 0px;
+    padding: 17px 15px 14px 15px; }
+  .header-search input[type="submit"]:hover {
+    background: #333;
+    color: #fff;
+    border: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0px; }
+  .header-search input[type="search"] {
+    border-radius: 0px; }
+
 nav.main-navigation {
   display: inline-block;
   float: right;

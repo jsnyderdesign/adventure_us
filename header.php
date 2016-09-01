@@ -18,12 +18,33 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Google Fonts Links -->
- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
 
 <!-- Font Awesome Embed -->
 <script src="https://use.fontawesome.com/1a73dbe823.js"></script>
 
+<!-- Jquery Call -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $( '.search-icon' ).click(function() {
+    $( '.header-search-bar' ).css({
+       opacity: 0,
+       display: 'inline-block'
+   }).animate({opacity:1},600);
+    $( '.search-icon' ).css( 'display' , 'none' );
+    $( '.search-icon-close' ).css( 'display' , 'inline-block' );
+  });
+  $( '.search-icon-close' ).click(function () {
+    $( '.header-search-bar' ).css( 'display' , 'none' );
+    $( '.search-icon-close' ).css( 'display' , 'none' );
+    $( '.search-icon' ).css( 'display' , 'inline-block' );
+  })
+
+});
+</script>
 
 <?php wp_head(); ?>
 </head>
@@ -44,10 +65,20 @@
         </div>
       <?php endif; ?>
 
+
+        <div class="header-search">
+          <div class="header-search-bar">
+            <?php get_search_form(); ?>
+          </div>
+          <i class="fa fa-search search-icon" aria-hidden="true"></i>
+          <i class="fa fa-times search-icon-close" aria-hidden="true"></i>
+        </div>
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'adventure_us' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+
     </div><!-- .container -->
 	</header><!-- #masthead -->
 
