@@ -34,9 +34,11 @@
 		</div><!-- .footer-nav -->
 
 		<!-- Adds Social Media buttons -->
+		<?php if( get_theme_mod( 'social_checkbox_footer' ) == '') { ?>
 		<div class="footer-social-media">
 				<?php wi_social_icons(); ?>
 		</div><!-- .footer-social-media -->
+		<?php } // end if ?>
 
 		</div><!-- .site-info -->
 	</div><!-- .container -->

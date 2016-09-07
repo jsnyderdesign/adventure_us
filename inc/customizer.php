@@ -100,6 +100,18 @@ function adventure_us_customize_register( $wp_customize ) {
  		'type'           => 'theme_mod',
  		'capability'     => 'edit_theme_options',
  ) );
+ $wp_customize->add_setting( 'about_me_checkbox', array(
+		'default'        => '',
+		'type'           => 'theme_mod',
+		'capability'     => 'edit_theme_options',
+ ) );
+ $wp_customize->add_control( 'about_me_checkbox', array(
+	 'label'      => __( 'Hide about me section in sidebar?', 'themename' ),
+	 'section'    => 'about_me',
+	 'settings'   => 'about_me_checkbox',
+	 'type'       => 'checkbox',
+	 'priority'   => 0
+ ) );
  $wp_customize->add_control(
  		 new WP_Customize_Image_Control(
  				 $wp_customize,
@@ -143,6 +155,30 @@ function adventure_us_customize_register( $wp_customize ) {
 			'priority'	=> 50
 		)
 	);
+	$wp_customize->add_setting( 'social_checkbox_sidebar', array(
+		 'default'        => '',
+		 'type'           => 'theme_mod',
+		 'capability'     => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'social_checkbox_sidebar', array(
+		'label'      => __( 'Hide social media in sidebar', 'themename' ),
+		'section'    => 'socials',
+		'settings'   => 'social_checkbox_sidebar',
+		'type'       => 'checkbox',
+		'priority'   => 0
+	) );
+	$wp_customize->add_setting( 'social_checkbox_footer', array(
+		 'default'        => '',
+		 'type'           => 'theme_mod',
+		 'capability'     => 'edit_theme_options',
+	) );
+	$wp_customize->add_control( 'social_checkbox_footer', array(
+		'label'      => __( 'Hide social media in footer', 'themename' ),
+		'section'    => 'socials',
+		'settings'   => 'social_checkbox_footer',
+		'type'       => 'checkbox',
+		'priority'   => 0
+	) );
 
 	$wp_customize->add_setting(
 		'wi_facebook'
@@ -167,32 +203,6 @@ function adventure_us_customize_register( $wp_customize ) {
 			'section'	=> 'socials',
 			'type'		=> 'text',
 			'priority'	=> 2
-		)
-	);
-
-	$wp_customize->add_setting(
-		'wi_behance'
-	);
-	$wp_customize->add_control(
-		'wi_behance',
-		array(
-			'label'		=> __('Behance URL', 'themename'),
-			'section'	=> 'socials',
-			'type'		=> 'text',
-			'priority'	=> 3
-		)
-	);
-
-	$wp_customize->add_setting(
-		'wi_dribbble'
-	);
-	$wp_customize->add_control(
-		'wi_dribbble',
-		array(
-			'label'		=> __('Dribbble URL', 'themename'),
-			'section'	=> 'socials',
-			'type'		=> 'text',
-			'priority'	=> 4
 		)
 	);
 
@@ -274,19 +284,6 @@ function adventure_us_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'wi_github'
-	);
-	$wp_customize->add_control(
-		'wi_github',
-		array(
-			'label'		=> __('GitHub URL', 'themename'),
-			'section'	=> 'socials',
-			'type'		=> 'text',
-			'priority'	=> 11
-		)
-	);
-
-	$wp_customize->add_setting(
 		'wi_linkedin'
 	);
 	$wp_customize->add_control(
@@ -360,11 +357,18 @@ function bwpy_customizer_head_styles() {
 			h2.entry-title a:hover {
 				color: <?php echo $theme_color; ?>;
 			}
-			h2.section-title::after {
+			h2.section-title::after,
+			.widget-title:after,
+			.sidebar-about-me h2:after,
+			.sidebar-social h2:after {
 			 background: <?php echo $theme_color; ?>;
 			}
-			.header-search input[type="submit"] {
+			.header-search input[type="submit"],
+			input[type="submit"] {
 			 background: <?php echo $theme_color; ?>;
+			}
+			.widget li {
+				color: <?php echo $theme_color; ?>;
 			}
 		</style>
 	<?php

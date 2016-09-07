@@ -397,6 +397,37 @@ h2.section-title:after {
 	padding: 20px;
 	@include card-shadow {}
 	background: $color__card-background;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		font-size: .75em;
+		margin: 0 15px 10px 0;
+		color: $color__site-theme;
+		display: inline-block;
+
+		a, a:visited {
+			text-decoration: none;
+			color: #636363;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+	.tagcloud {
+		a {
+			font-size: .75em !important;
+			margin: 0 15px 10px 0;
+			color: #636363;
+			display: inline-block;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+	}
 }
 .widget-title {
 	text-transform: uppercase;
