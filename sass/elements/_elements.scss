@@ -399,9 +399,89 @@ h2.section-title:after {
 	background: $color__card-background;
 }
 .widget-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $color__site-header;
 	margin: 0 0 15px 0;
+	position: relative;
+	font-size: 1.1em;
 }
+.widget-title:after {
+	position: absolute;
+	top: 27px;
+	left: 0;
+	width: 60px;
+	height: 2px;
+	background: $color__site-hover;
+	content: '';
+	opacity: 1;
+}
+.sidebar-about-me {
+	@include card-shadow {}
+	background: $color__card-background;
+	margin: 0 0 25px 0;
+	img {
+		width: 100%;
+	}
+	.sidebar-text {
+		padding: 20px;
+	}
+	h2 {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $color__site-header;
+		margin: 0 0 15px 0;
+		position: relative;
+		font-size: 1.1em;
+	}
 
+	h2:after {
+		position: absolute;
+		top: 27px;
+		left: 0;
+		width: 60px;
+		height: 2px;
+		background: $color__site-hover;
+		content: '';
+		opacity: 1;
+	}
+
+}
+.sidebar-social {
+	padding: 20px;
+	@include card-shadow {}
+	background: $color__card-background;
+	h2 {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $color__site-header;
+		margin: 0 0 15px 0;
+		position: relative;
+		font-size: 1.1em;
+	}
+
+	h2:after {
+		position: absolute;
+		top: 27px;
+		left: 0;
+		width: 60px;
+		height: 2px;
+		background: $color__site-hover;
+		content: '';
+		opacity: 1;
+	}
+	a, a:visited {
+		color: $color__footer-social-media;
+		font-size: 2em;
+		margin: 0 25px 0 0;
+	}
+	a:hover {
+		color: $color__footer-social-media-hover;
+	}
+	a:last-child {
+		margin: 0;
+	}
+}
 
 /* Footer Styling */
 footer {

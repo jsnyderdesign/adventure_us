@@ -90,6 +90,52 @@ function adventure_us_customize_register( $wp_customize ) {
 		'settings'   => 'regular_title',
 		'type'       => 'text',
  ) );
+ // Adds Custom About me section to sidebar
+ $wp_customize->add_section( 'about_me', array(
+ 	'title'          => __( 'About Me', 'themename' ),
+ 	'priority'       => 43,
+ ) );
+ $wp_customize->add_setting( 'about_me_image', array(
+ 		'default'        => '',
+ 		'type'           => 'theme_mod',
+ 		'capability'     => 'edit_theme_options',
+ ) );
+ $wp_customize->add_control(
+ 		 new WP_Customize_Image_Control(
+ 				 $wp_customize,
+ 				 'about_me_image',
+ 				 array(
+ 						 'label'      => __( 'Upload an image', 'theme_name' ),
+ 						 'section'    => 'about_me',
+ 						 'settings'   => 'about_me_image',
+ 						 'context'    => 'about_me_image'
+ 				 )
+ 		 )
+  );
+	$wp_customize->add_setting( 'about_me_title', array(
+ 		 'default'        => '',
+ 		 'type'           => 'theme_mod',
+ 		 'capability'     => 'edit_theme_options',
+  ) );
+  $wp_customize->add_control( 'about_me_title', array(
+ 		'label'      => __( 'About Me Title Section', 'themename' ),
+ 		'section'    => 'about_me',
+ 		'settings'   => 'about_me_title',
+ 		'type'       => 'text',
+  ) );
+	$wp_customize->add_setting( 'about_me_text', array(
+		 'default'        => '',
+		 'type'           => 'theme_mod',
+		 'capability'     => 'edit_theme_options',
+	) );
+  $wp_customize->add_control( 'about_me_text', array(
+ 		'label'      => __( 'About Me Text', 'themename' ),
+ 		'section'    => 'about_me',
+ 		'settings'   => 'about_me_text',
+ 		'type'       => 'textarea',
+  ) );
+
+
 	// SOCIAL MEDIA BUTTONS STARTING HERE
 	$wp_customize->add_section( 'socials',
 		array(
@@ -315,6 +361,9 @@ function bwpy_customizer_head_styles() {
 				color: <?php echo $theme_color; ?>;
 			}
 			h2.section-title::after {
+			 background: <?php echo $theme_color; ?>;
+			}
+			.header-search input[type="submit"] {
 			 background: <?php echo $theme_color; ?>;
 			}
 		</style>
