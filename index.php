@@ -50,7 +50,7 @@ get_header(); ?>
 
 								<?php get_template_part( 'template-parts/content-homepage', get_post_format() ); ?>
 						</div>
-					<h2 class="section-title"><?php echo get_theme_mod( 'regular_title' ); ?></h2>	
+					<h2 class="section-title"><?php echo get_theme_mod( 'regular_title' ); ?></h2>
 					<!-- Styling for all other regular posts -->
 					<?php } else { ?>
 					<div class="regular-post">
@@ -61,8 +61,13 @@ get_header(); ?>
 
 				<?php } endwhile; ?>
 
-				<?php the_posts_navigation(); ?>
+				<div class="pagination">
+					<?php the_posts_pagination( array( 'mid_size'  => 6 ) ); ?>
+				</div>
 
+				<div class="post-navigation">
+					<?php the_posts_navigation(); ?>
+				</div>
 			<?php else : ?>
 
 				<?php get_template_part( 'content', 'none' ); ?>

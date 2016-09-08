@@ -106,7 +106,7 @@ function adventure_us_customize_register( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
  ) );
  $wp_customize->add_control( 'about_me_checkbox', array(
-	 'label'      => __( 'Hide about me section in sidebar?', 'themename' ),
+	 'label'      => __( 'Hide about me section in sidebar', 'themename' ),
 	 'section'    => 'about_me',
 	 'settings'   => 'about_me_checkbox',
 	 'type'       => 'checkbox',

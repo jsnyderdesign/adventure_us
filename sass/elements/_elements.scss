@@ -174,6 +174,16 @@ nav.main-navigation {
 		background: #fff;
 		top: 2.125em;
 
+		.menu-item-has-children {
+			background: url(images/down-caret.jpg);
+			height: auto;
+			width: auto;
+			display: block;
+			background-repeat: no-repeat;
+			background-position: 93% 50%;
+			padding: 0 13px 0 0;
+		}
+
 		a:hover:before, a:hover:after {
 			content: '';
 			opacity: 0;
@@ -391,6 +401,93 @@ h2.section-title:after {
 		}
 	}
 }
+
+/* Pagination and Post Navigation Styling */
+.pagination {
+	float: left;
+	.nav-links {
+		.page-numbers {
+			background: #fff;
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			color: #24232b;
+			padding: 6px 0 0 0;
+			text-align: center;
+			text-decoration: none;
+			@include card-shadow {}
+
+		}
+		span.current {
+			background: #24232b;
+			color: #fff;
+		}
+		.page-numbers:hover {
+			background: #24232b;
+			color: #fff;
+		}
+		a.next, a.prev {
+			width: auto;
+			padding: 6px 10px 0 10px;
+		}
+		a.prev:before {
+			content: "\f177";
+			font-family: FontAwesome;
+			margin: 0 10px 0 0px;
+			text-decoration: none;
+		}
+		a.prev:hover::before {
+			text-decoration: none;
+		}
+	}
+}
+.post-navigation {
+	float: right;
+	margin: 0 !important;
+
+	.nav-previous {
+		display: inline-block;
+		width: auto !important;
+
+		a, a:visited {
+			color: #24232b;
+			background: #fff;
+			text-decoration: none;
+			padding: 6px 15px;
+			display: inline-block;
+			@include card-shadow {}
+			margin: 0 0 10px 0;
+		}
+		a:after {
+			content: "\f178";
+			font-family: FontAwesome;
+			margin: 0 0 0 10px;
+		}
+		a:hover {
+			color: #fff;
+			background: #24232b;
+		}
+	}
+	.nav-next {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Sidebar Styling */
 .widget {

@@ -440,6 +440,14 @@ nav.main-navigation {
   nav.main-navigation ul ul {
     background: #fff;
     top: 2.125em; }
+    nav.main-navigation ul ul .menu-item-has-children {
+      background: url(images/down-caret.jpg);
+      height: auto;
+      width: auto;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: 93% 50%;
+      padding: 0 13px 0 0; }
     nav.main-navigation ul ul a:hover:before, nav.main-navigation ul ul a:hover:after {
       content: '';
       opacity: 0;
@@ -595,6 +603,64 @@ h2.section-title:after {
         text-decoration: none; }
       .regular-post .entry-content .entry-meta a:hover {
         color: #24232b; }
+
+/* Pagination and Post Navigation Styling */
+.pagination {
+  float: left; }
+  .pagination .nav-links .page-numbers {
+    background: #fff;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    color: #24232b;
+    padding: 6px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05); }
+  .pagination .nav-links span.current {
+    background: #24232b;
+    color: #fff; }
+  .pagination .nav-links .page-numbers:hover {
+    background: #24232b;
+    color: #fff; }
+  .pagination .nav-links a.next, .pagination .nav-links a.prev {
+    width: auto;
+    padding: 6px 10px 0 10px; }
+  .pagination .nav-links a.prev:before {
+    content: "\f177";
+    font-family: FontAwesome;
+    margin: 0 10px 0 0px;
+    text-decoration: none; }
+  .pagination .nav-links a.prev:hover::before {
+    text-decoration: none; }
+
+.post-navigation {
+  float: right;
+  margin: 0 !important; }
+  .post-navigation .nav-previous {
+    display: inline-block;
+    width: auto !important; }
+    .post-navigation .nav-previous a, .post-navigation .nav-previous a:visited {
+      color: #24232b;
+      background: #fff;
+      text-decoration: none;
+      padding: 6px 15px;
+      display: inline-block;
+      -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+      margin: 0 0 10px 0; }
+    .post-navigation .nav-previous a:after {
+      content: "\f178";
+      font-family: FontAwesome;
+      margin: 0 0 0 10px; }
+    .post-navigation .nav-previous a:hover {
+      color: #fff;
+      background: #24232b; }
+  .post-navigation .nav-next {
+    display: none; }
 
 /* Sidebar Styling */
 .widget {
