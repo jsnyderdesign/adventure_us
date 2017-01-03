@@ -49,6 +49,13 @@ function adventure_us_setup() {
 		'primary' => esc_html__( 'Primary', 'adventure_us' ),
 	) );
 
+	function wpb_autolink_featured_images( $html, $post_id, $post_image_id ) {
+$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
+return $html;
+}
+add_filter( 'post_thumbnail_html', 'wpb_autolink_featured_images', 10, 3 );
+
+
 	// Changing excerpt more
    function new_excerpt_more($more) {
    global $post;

@@ -28,6 +28,7 @@ get_header(); ?>
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
+	 background-attachment: fixed;
 	">
 	<!-- Puts site quote here -->
 	<p class="site-quote"><?php echo get_theme_mod( 'site_quote' ); ?></p>
