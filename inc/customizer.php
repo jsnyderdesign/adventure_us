@@ -354,6 +354,13 @@ function bwpy_customizer_head_styles() {
 			.regular-post .entry-content .entry-meta a, .regular-post .entry-content .entry-meta a:visited {
 				color: <?php echo $theme_color; ?>;
 			}
+			.featured-post .entry-content a.readmore {
+				color: <?php echo $theme_color; ?>;
+				border: 2px solid <?php echo $theme_color; ?>;
+			}
+			.regular-post a.readmore {
+				color: <?php echo $theme_color; ?>;
+			}
 			h2.entry-title a:hover {
 				color: <?php echo $theme_color; ?>;
 			}

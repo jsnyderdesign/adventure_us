@@ -21,7 +21,7 @@
 		<?php wp_list_categories('title_li=&hierarchical=0&depth=1' , ' | ' ); ?>
 	</div>
 	<div class="entry-meta">
-		<?php adventure_us_posted_on(); ?>
+		<?php the_time('F jS, Y') ?>
 	</div><!-- .entry-meta -->
 		<?php
 		if ( is_single() ) :

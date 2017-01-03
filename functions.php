@@ -52,7 +52,7 @@ function adventure_us_setup() {
 	// Changing excerpt more
    function new_excerpt_more($more) {
    global $post;
-   return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+   return '… <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'Continue Reading &raquo;' . '</a>';
    }
    add_filter('excerpt_more', 'new_excerpt_more');
 	 /**
@@ -86,6 +86,9 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 		//'default-image' => '',
 	//) ) );
 }
+
+
+
 endif;
 add_action( 'after_setup_theme', 'adventure_us_setup' );
 

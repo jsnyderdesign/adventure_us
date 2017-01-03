@@ -27,6 +27,7 @@
 <!-- Jquery Call -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
+<!-- Search bar opening script -->
 <script>
 $(document).ready(function() {
   $( '.search-icon' ).click(function() {
@@ -43,6 +44,33 @@ $(document).ready(function() {
     $( '.search-icon' ).css( 'display' , 'inline-block' );
   })
 
+});
+</script>
+
+<!-- Back to top script -->
+<script>
+$(document).ready(function() {
+if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
 });
 </script>
 

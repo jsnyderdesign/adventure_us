@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php adventure_us_posted_on(); ?>
+			<?php the_time('F jS, Y') ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
