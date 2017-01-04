@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="single-post-card">
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -24,6 +25,8 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+
+		<?php the_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -40,6 +43,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+</div> <!-- Single Post Card -->
 
 	<footer class="entry-footer">
 		<?php adventure_us_entry_footer(); ?>

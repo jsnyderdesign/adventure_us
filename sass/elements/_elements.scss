@@ -810,3 +810,14 @@ nav.footer-navigation {
 		padding: 0;
 	}
 }
+
+/* Interior Page Styling */
+.single-post-card {
+	margin: 35px 0 65px 0;
+	@include card-shadow {}
+	background: #fff;
+	padding: 10px 30px 50px 30px;
+}
+body.single aside {
+	margin-top: 35px;
+}

@@ -930,6 +930,18 @@ nav.footer-navigation {
     display: block;
     padding: 0; }
 
+/* Interior Page Styling */
+.single-post-card {
+  margin: 35px 0 65px 0;
+  -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  padding: 10px 30px 50px 30px; }
+
+body.single aside {
+  margin-top: 35px; }
+
 /*--------------------------------------------------------------
 # Skeleton Grid
 --------------------------------------------------------------*/
@@ -1215,7 +1227,7 @@ a {
         top: 0; }
       .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 0%;
-        top: 105%; }
+        top: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
