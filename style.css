@@ -932,14 +932,23 @@ nav.footer-navigation {
 
 /* Interior Page Styling */
 .single-post-card {
-  margin: 35px 0 65px 0;
+  margin: 35px 0 20px 0;
   -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
   background: #fff;
   padding: 10px 30px 50px 30px; }
+  .single-post-card .entry-title {
+    margin: 10px 0 20px 0; }
+  .single-post-card .entry-meta {
+    text-transform: uppercase;
+    color: #999;
+    font-size: .7em; }
 
 body.single aside {
+  margin-top: 35px; }
+
+body.single footer {
   margin-top: 35px; }
 
 /*--------------------------------------------------------------

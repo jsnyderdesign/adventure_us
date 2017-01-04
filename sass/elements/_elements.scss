@@ -813,11 +813,23 @@ nav.footer-navigation {
 
 /* Interior Page Styling */
 .single-post-card {
-	margin: 35px 0 65px 0;
+	margin: 35px 0 20px 0;
 	@include card-shadow {}
 	background: #fff;
 	padding: 10px 30px 50px 30px;
+
+	.entry-title {
+		margin: 10px 0 20px 0;
+	}
+	.entry-meta {
+		text-transform: uppercase;
+		color: #999;
+		font-size: .7em;
+	}
 }
 body.single aside {
+	margin-top: 35px;
+}
+body.single footer {
 	margin-top: 35px;
 }
