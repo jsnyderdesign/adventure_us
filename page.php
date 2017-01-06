@@ -13,10 +13,10 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="container">
+	<div id="primary" class="content-area two-thirds column">
 		<main id="main" class="site-main" role="main">
-
+			<div class="single-post-card">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -29,10 +29,12 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
+		</div><!-- .single-post-card -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+get_sidebar(); ?>
+</div><!-- .container -->
+<?php
 get_footer();

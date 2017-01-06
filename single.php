@@ -8,7 +8,9 @@
  */
 
 get_header(); ?>
+
 <div class="container">
+
 	<div id="primary" class="content-area two-thirds column">
 		<main id="main" class="site-main" role="main">
 

@@ -45,10 +45,10 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-
 	<footer class="entry-footer">
 		<?php adventure_us_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-	</div> <!-- Single Post Card -->
+</div> <!-- Single Post Card -->
+
+
 </article><!-- #post-## -->

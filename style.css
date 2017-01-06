@@ -945,11 +945,25 @@ nav.footer-navigation {
     color: #999;
     font-size: .7em; }
 
-body.single aside {
+body.single aside,
+body.page aside {
   margin-top: 35px; }
 
-body.single footer {
+body.single footer,
+body.page footer {
   margin-top: 35px; }
+
+body.single-fullpage .entry-header {
+  display: none; }
+
+body.single-fullpage .header-image {
+  margin: 0 auto; }
+
+body.single-fullpage .single-post-card {
+  margin: 0px auto 20px auto; }
+
+.site-quote .date-meta {
+  font-size: .4em; }
 
 /*--------------------------------------------------------------
 # Skeleton Grid

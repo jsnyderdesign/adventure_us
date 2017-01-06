@@ -168,6 +168,31 @@ function wi_social_icons() {
 }
 
 
+/* Adds fullpage posts into blogroll */
+add_filter( 'pre_get_posts', 'my_get_posts' );
+
+function my_get_posts( $query ) {
+
+	if ( ( is_home() && $query->is_main_query() ) || is_feed() )
+		$query->set( 'post_type', array( 'post', 'fullpage' ) );
+
+	return $query;
+}
+/* Adds custom post type for full page featured posts */
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'fullpage',
+    array(
+      'labels' => array(
+        'name' => __( 'Featured Full Page Posts' ),
+        'singular_name' => __( 'fullpage' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+			'supports' => array( 'title' , 'thumbnail' , 'revisions' , 'editor' )
+    )
+  );
+}
 /**
  * Enqueue scripts and styles.
  */
