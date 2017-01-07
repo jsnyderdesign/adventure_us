@@ -829,7 +829,8 @@ h2.section-title:after {
 
 /* Footer Styling */
 footer {
-  background: #fff; }
+  background: #fff;
+  margin: 35px 0 0 0; }
   footer .site-info {
     text-align: center; }
     footer .site-info .footer-nav {
@@ -946,8 +947,40 @@ nav.footer-navigation {
     font-size: .7em; }
 
 body.single aside,
-body.page aside {
+body.page aside,
+body.archive aside,
+body.archive main,
+body.search main,
+body.search aside,
+body.error404 main,
+body.error404 aside {
   margin-top: 35px; }
+
+body.archive header.page-header,
+body.search header.page-header,
+body.error404 header.page-header {
+  background: none; }
+
+body.archive h2.page-title,
+body.search h2.page-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #24232b;
+  margin: 0 0 35px 0;
+  position: relative;
+  background: none;
+  font-size: 1.5em; }
+
+body.archive h2.page-title:after,
+body.search h2.page-title:after {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 120px;
+  height: 2px;
+  background: #b98822;
+  content: '';
+  opacity: 1; }
 
 body.single footer,
 body.page footer {
@@ -964,6 +997,17 @@ body.single-fullpage .single-post-card {
 
 .site-quote .date-meta {
   font-size: .4em; }
+
+.search-error {
+  background: #fff;
+  display: block;
+  padding: 20px; }
+  .search-error p {
+    margin: 0 0 20px 0;
+    font-family: "Montserrat", sans-serif; }
+
+body.error404 .page-content p {
+  font-family: "Montserrat", sans-serif; }
 
 /*--------------------------------------------------------------
 # Skeleton Grid

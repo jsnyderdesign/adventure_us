@@ -69,7 +69,7 @@ add_filter( 'post_thumbnail_html', 'wpb_autolink_featured_images', 10, 3 );
  * @return int (Maybe) modified excerpt length.
  */
 
-// Set excerpt length here... I think.
+// Set excerpt length here.
 function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
@@ -166,6 +166,18 @@ function wi_social_icons() {
 		if ( $rss ) echo  '<a target="_blank" href="' . esc_url( $rss ) . '"><i class="fa fa-rss"></i></a>';
 	echo '</div>';
 }
+
+
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_category() ) {
+            $title = single_cat_title( '', false );
+        } elseif ( is_tag() ) {
+            $title = single_tag_title( '', false );
+        } elseif ( is_author() ) {
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        }
+    return $title;
+});
 
 
 /* Adds fullpage posts into blogroll */

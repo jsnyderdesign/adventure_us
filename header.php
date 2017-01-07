@@ -76,7 +76,7 @@ if ($('#back-to-top').length) {
 
 <?php wp_head(); ?>
 </head>
-
+<a href="#" id="back-to-top" title="Back to top">&uarr; <p>top</p></a>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'adventure_us' ); ?></a>

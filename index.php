@@ -35,7 +35,7 @@ get_header(); ?>
 </div>
 <?php endif; // End header image check. ?>
 
-<a href="#" id="back-to-top" title="Back to top">&uarr; <p>top</p></a>
+
 		<div class="container">
 	<div id="primary" class="content-area two-thirds column">
 
