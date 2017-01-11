@@ -355,11 +355,11 @@ nav.main-navigation {
    li > a:after {
   			content: url(http://adventureus.jessesnyderdesign.com/wp-content/themes/_s-master%202/images/down-caret.jpg);
   	}
-  
+
    li > a:hover:after {
   			content: url(http://adventureus.jessesnyderdesign.com/wp-content/themes/_s-master%202/images/down-caret.jpg);
   	}
-  
+
   li > a:only-child:after {
   			content: '';
   	}
@@ -383,14 +383,14 @@ nav.main-navigation {
     			-moz-transform: translateY(-10px);
     			transform: translateY(-10px);
     		}
-    
+
     		 a:before {
     			top: 0;
     			-webkit-transform: translateY(-10px);
     			-moz-transform: translateY(-10px);
     			transform: translateY(-10px);
     		}
-    
+
     		a:after {
     			bottom: 0;
     			-webkit-transform: translateY(10px);
@@ -814,16 +814,6 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
 
 /*--------------------------------------------------------------
 ## Menus

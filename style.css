@@ -235,9 +235,14 @@ h2.entry-title a, h2.entry-title a:visited {
 h2.entry-title a:hover {
   color: #999; }
 
+h1 {
+  font-size: 2.5em; }
+
 p {
-  margin-bottom: 1.5em;
-  font-family: "Cardo", serif; }
+  margin-bottom: 2em;
+  font-family: "Cardo", serif;
+  font-size: 1.1em;
+  line-height: 1.65em; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -1009,6 +1014,12 @@ body.single-fullpage .single-post-card {
 body.error404 .page-content p {
   font-family: "Montserrat", sans-serif; }
 
+a, a:visited {
+  color: #b98822; }
+
+a:hover {
+  color: #24232b; }
+
 /*--------------------------------------------------------------
 # Skeleton Grid
 --------------------------------------------------------------*/
@@ -1258,17 +1269,6 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/

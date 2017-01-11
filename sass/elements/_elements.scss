@@ -893,3 +893,9 @@ body.single-fullpage .single-post-card {
 body.error404 .page-content p {
 	font-family: $font__main;
 }
+a, a:visited {
+	color: $color__site-theme;
+}
+a:hover {
+	color: $color__site-theme-hover;
+}

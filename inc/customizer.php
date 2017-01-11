@@ -337,8 +337,8 @@ function bwpy_customizer_head_styles() {
 	if ( $theme_color != '#b98822' ) :
 	?>
 		<style type="text/css">
-			a {
-				color: <?php echo $theme_color; ?>;
+		a, a:visited {
+				color: <?php echo $theme_color; ?> !important;
 			}
 			nav.main-navigation li a:before, nav.main-navigation li a:after  {
 				background: <?php echo $theme_color; ?>;
@@ -377,6 +377,8 @@ function bwpy_customizer_head_styles() {
 			.widget li {
 				color: <?php echo $theme_color; ?>;
 			}
+
+
 		</style>
 	<?php
 	endif;
