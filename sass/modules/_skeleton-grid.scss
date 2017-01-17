@@ -280,10 +280,13 @@ there.
     }
   }
 
-  nav.main-navigation ul ul li:hover > ul {
+  nav.main-navigation ul ul li {
+    &:hover > ul,
+    &.focus > ul {
       left: 20%;
       top: 100%;
     }
+  }
 
 }
 
@@ -298,10 +301,13 @@ there.
   .column {
     margin-left: 0%;
   }
-  nav.main-navigation ul ul li:hover > ul {
+  nav.main-navigation ul ul li {
+    &:hover > ul,
+    &.focus > ul {
       left: 20%;
       top: 100%;
     }
+  }
 
 }
 
@@ -313,9 +319,12 @@ there.
   aside input {
     margin: 10px 0 0 0;
   }
-  nav.main-navigation ul ul li:hover > ul {
+  nav.main-navigation ul ul li {
+    &:hover > ul,
+    &.focus > ul {
       left: 20%;
       top: 100%;
     }
+  }
 
 }
