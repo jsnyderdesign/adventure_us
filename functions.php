@@ -196,7 +196,7 @@ function create_post_type() {
   register_post_type( 'fullpage',
     array(
       'labels' => array(
-        'name' => __( 'Featured Full Page Posts' ),
+        'name' => __( 'Full Page Posts' ),
         'singular_name' => __( 'fullpage' )
       ),
       'public' => true,
