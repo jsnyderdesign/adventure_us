@@ -279,6 +279,12 @@ there.
       margin: 0 auto;
     }
   }
+
+  nav.main-navigation ul ul li:hover > ul {
+      left: 20%;
+      top: 100%;
+    }
+
 }
 
 /* Smaller than phablet (also point when grid becomes active) */
@@ -292,6 +298,11 @@ there.
   .column {
     margin-left: 0%;
   }
+  nav.main-navigation ul ul li:hover > ul {
+      left: 20%;
+      top: 100%;
+    }
+
 }
 
 /* Smaller than mobile */
@@ -302,4 +313,9 @@ there.
   aside input {
     margin: 10px 0 0 0;
   }
+  nav.main-navigation ul ul li:hover > ul {
+      left: 20%;
+      top: 100%;
+    }
+
 }

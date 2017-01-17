@@ -1316,7 +1316,11 @@ there.
   nav#site-navigation {
     display: block; }
     nav#site-navigation .menu-toggle {
-      margin: 0 auto; } }
+      margin: 0 auto; }
+
+  nav.main-navigation ul ul li:hover > ul {
+    left: 20%;
+    top: 100%; } }
 /* Smaller than phablet (also point when grid becomes active) */
 @media (max-width: 550px) {
   .two-thirds.column, .one-third.column {
@@ -1326,14 +1330,22 @@ there.
     width: 400px; }
 
   .column {
-    margin-left: 0%; } }
+    margin-left: 0%; }
+
+  nav.main-navigation ul ul li:hover > ul {
+    left: 20%;
+    top: 100%; } }
 /* Smaller than mobile */
 @media (max-width: 400px) {
   .header-image p {
     width: 300px; }
 
   aside input {
-    margin: 10px 0 0 0; } }
+    margin: 10px 0 0 0; }
+
+  nav.main-navigation ul ul li:hover > ul {
+    left: 20%;
+    top: 100%; } }
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
