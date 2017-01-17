@@ -26,8 +26,8 @@
 			li {
 				&:hover > ul,
 				&.focus > ul {
-					left: 0%;
-					top: 100%;
+					left: 100%;
+					top: -8%;
 				}
 			}
 
