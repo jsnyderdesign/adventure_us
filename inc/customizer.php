@@ -343,8 +343,12 @@ function bwpy_customizer_head_styles() {
 			nav.main-navigation li a:before, nav.main-navigation li a:after  {
 				background: <?php echo $theme_color; ?>;
 			}
+			nav.main-navigation li a,
+			nav.main-navigation li a:visited {
+				color: #24232b !important;
+			}
 			nav.main-navigation li a:hover {
-				color: <?php echo $theme_color; ?>;
+				color: <?php echo $theme_color; ?> !important;
 			}
 			.featured-post .entry-content .category a, .featured-post .entry-content .category a:visited,
 			.regular-post .entry-content .category a, .regular-post .entry-content .category a:visited {
