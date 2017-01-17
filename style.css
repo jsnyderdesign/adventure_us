@@ -1178,11 +1178,162 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
-/* Larger than mobile */
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
+/* Smaller than desktop */
+@media (max-width: 1000px) {
+  .two-thirds.column, .one-third.column {
+    width: 100%; }
+
+  .header-image p {
+    width: 750px; }
+
+  .column {
+    margin-left: 0%; }
+
+  .menu-toggle {
+    background: none;
+    color: #000; }
+
+  .footer-nav nav, .footer-nav .footer-tagline {
+    display: none; }
+
+  .site-logo {
+    float: none;
+    display: block; }
+    .site-logo a img {
+      display: block;
+      margin: 0 auto; }
+
+  .header-search .search-icon {
+    margin: 17px 0 0 0; }
+  .header-search .search-icon-close {
+    margin: 17px 0 0 7px; }
+  .header-search .header-search-bar {
+    margin: 8px 0 0 0; }
+
+  nav#site-navigation {
+    display: inline-block;
+    float: none; }
+
+  nav.main-navigation {
+    display: inline-block;
+    float: right;
+    margin: 20px 0 0 0;
+    width: auto;
+    clear: none; }
+    nav.main-navigation li {
+      margin: 0 0 0 20px;
+      float: none; }
+      nav.main-navigation li a {
+        padding: 5px 0px;
+        color: #24232b;
+        font-weight: 400;
+        text-shadow: none;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+        text-transform: uppercase; }
+      nav.main-navigation li a:before,
+      nav.main-navigation li a:after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: none;
+        content: '';
+        opacity: 0;
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none; }
+      nav.main-navigation li a:before {
+        top: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none; }
+      nav.main-navigation li a:after {
+        bottom: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        transform: none; }
+      nav.main-navigation li a:hover,
+      nav.main-navigation li a:focus {
+        color: #b98822; }
+      nav.main-navigation li a:hover:before,
+      nav.main-navigation li a:focus:before,
+      nav.main-navigation li a:hover:after,
+      nav.main-navigation li a:focus:after {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px); }
+    nav.main-navigation ul ul {
+      background: #fff;
+      top: 2.125em; }
+      nav.main-navigation ul ul .menu-item-has-children {
+        background: url(images/down-caret.jpg);
+        height: auto;
+        width: auto;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: 93% 50%;
+        padding: 0 13px 0 0; }
+      nav.main-navigation ul ul a:hover:before, nav.main-navigation ul ul a:hover:after {
+        content: '';
+        opacity: 0;
+        height: 0px; } }
+/* Smaller than tablet */
+@media (max-width: 750px) {
+  .two-thirds.column, .one-third.column {
+    width: 100%; }
+
+  .header-image p {
+    width: 400px; }
+
+  .regular-post .entry-content {
+    display: block; }
+
+  .regular-post .hentry {
+    background: #fff; }
+
+  .regular-post header img {
+    max-width: 100%; }
+
+  .column {
+    margin-left: 0%; }
+
+  .pagination {
+    margin: 0 0 20px 0;
+    float: none; }
+
+  .post-navigation {
+    float: left; }
+
+  .header-search {
+    display: none; }
+
+  nav#site-navigation {
+    display: block; }
+    nav#site-navigation .menu-toggle {
+      margin: 0 auto; } }
+/* Smaller than phablet (also point when grid becomes active) */
+@media (max-width: 550px) {
+  .two-thirds.column, .one-third.column {
+    width: 100%; }
+
+  .header-image p {
+    width: 400px; }
+
+  .column {
+    margin-left: 0%; } }
+/* Smaller than mobile */
+@media (max-width: 400px) {
+  .header-image p {
+    width: 300px; }
+
+  aside input {
+    margin: 10px 0 0 0; } }
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -1312,12 +1463,13 @@ textarea {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 1000px) {
   .menu-toggle {
     display: none; }
 
   .main-navigation ul {
-    display: block; } }
+    display: block;
+    background: #24232b; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {

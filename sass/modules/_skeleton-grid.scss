@@ -105,17 +105,201 @@ there.
 */
 
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
 
-/* Larger than tablet */
-@media (min-width: 750px) {}
 
-/* Larger than desktop */
-@media (min-width: 1000px) {}
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+
+/* Smaller than desktop */
+@media (max-width: 1000px) {
+  .two-thirds.column , .one-third.column {
+    width: 100%;
+  }
+  .header-image p {
+    width: 750px;
+  }
+  .column {
+    margin-left: 0%;
+  }
+  .menu-toggle {
+    background: none;
+    color: #000;
+  }
+  .footer-nav {
+    nav, .footer-tagline {
+      display: none;
+    }
+  }
+  .site-logo {
+    float: none;
+    display: block;
+    a img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .header-search {
+    .search-icon {
+      margin: 17px 0 0 0;
+    }
+    .search-icon-close {
+      margin: 17px 0 0 7px;
+    }
+    .header-search-bar {
+      margin: 8px 0 0 0;
+    }
+  }
+  nav#site-navigation {
+    display: inline-block;
+    float: none;
+  }
+  nav.main-navigation {
+  	display: inline-block;
+  	float: right;
+  	margin: 20px 0 0 0;
+  	width: auto;
+  	clear: none;
+
+
+  	li {
+  		margin: 0 0 0 20px;
+      float: none;
+
+  		 a {
+  			padding: 5px 0px;
+  			color: $color__main-navigation;
+  			font-weight: 400;
+  			text-shadow: none;
+  			-webkit-transition: color 0.3s;
+  			-moz-transition: color 0.3s;
+  			transition: color 0.3s;
+  			text-transform: uppercase;
+  		}
+  		 a:before,
+  		 a:after {
+  			position: absolute;
+  			left: 0;
+  			width: 100%;
+  			height: 1px;
+  			background: none;
+  			content: '';
+  			opacity: 0;
+  			-webkit-transition: none;
+  			-moz-transition: none;
+  			transition: none;
+  			-webkit-transform: none;
+  			-moz-transform: none;
+  			transform: none;
+  		}
+
+  		 a:before {
+  			top: 0;
+  			-webkit-transform: none;
+  			-moz-transform: none;
+  			transform: none;
+  		}
+
+  		a:after {
+  			bottom: 0;
+  			-webkit-transform: none;
+  			-moz-transform: none;
+  			transform: none;
+  		}
+  		 a:hover,
+  		 a:focus {
+  			color: $color__site-hover;
+  		}
+
+  		 a:hover:before,
+  		a:focus:before,
+  		 a:hover:after,
+  		 a:focus:after {
+  			opacity: 1;
+  			-webkit-transform: translateY(0px);
+  			-moz-transform: translateY(0px);
+  			transform: translateY(0px);
+  		}
+  	}
+  	ul ul {
+  		background: #fff;
+  		top: 2.125em;
+
+  		.menu-item-has-children {
+  			background: url(images/down-caret.jpg);
+  			height: auto;
+  			width: auto;
+  			display: block;
+  			background-repeat: no-repeat;
+  			background-position: 93% 50%;
+  			padding: 0 13px 0 0;
+  		}
+
+  		a:hover:before, a:hover:after {
+  			content: '';
+  			opacity: 0;
+  			height: 0px;
+  		}
+  	}
+  }
+}
+
+/* Smaller than tablet */
+@media (max-width: 750px) {
+  .two-thirds.column , .one-third.column {
+    width: 100%;
+  }
+  .header-image p {
+    width: 400px;
+  }
+  .regular-post .entry-content {
+    display: block;
+  }
+  .regular-post .hentry {
+    background: #fff;
+  }
+  .regular-post header img {
+    max-width: 100%;
+  }
+  .column {
+    margin-left: 0%;
+  }
+  .pagination {
+    margin: 0 0 20px 0;
+    float: none;
+  }
+  .post-navigation {
+    float: left;
+  }
+  .header-search {
+    display: none;
+  }
+  nav#site-navigation {
+    display: block;
+    .menu-toggle {
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Smaller than phablet (also point when grid becomes active) */
+@media (max-width: 550px) {
+  .two-thirds.column , .one-third.column {
+    width: 100%;
+  }
+  .header-image p {
+    width: 400px;
+  }
+  .column {
+    margin-left: 0%;
+  }
+}
+
+/* Smaller than mobile */
+@media (max-width: 400px) {
+  .header-image p {
+    width: 300px;
+  }
+  aside input {
+    margin: 10px 0 0 0;
+  }
+}

@@ -28,7 +28,6 @@
 			<div class="footer-nav">
 			<p class="footer-tagline">Explore</p>
 			<nav id="main-navigation" class="main-navigation footer-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'adventure_us' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 		</div><!-- .footer-nav -->
